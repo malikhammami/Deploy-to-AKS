@@ -61,7 +61,7 @@ stages:
               secretType: 'dockerRegistry'
               secretName: '$(acrsecret)'
               dockerRegistryEndpoint: 'K8SExamplesACR'
-          - task: replacetokens@3
+          - task: qetza.replacetokens.replacetokens-task.replacetokens@3
             displayName: Replace Tokens
             inputs:
               rootDirectory: '$(Pipeline.Workspace)/manifests/'
